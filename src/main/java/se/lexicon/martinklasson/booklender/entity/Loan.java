@@ -55,8 +55,7 @@ public class Loan {
         }
         return fine;
     }
-
-    //Change maxLoanDays to extend loan from the day the book should be returned
+    //This changes the MaxLoanDays in Book class... is it ok??????
     public boolean extendedLoan(int days){
         if(book.isReserved() || isOverdue()){
             return false;
