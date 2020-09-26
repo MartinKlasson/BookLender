@@ -31,6 +31,16 @@ public class Book {
         this.description = description;
     }
 
+    public Book(int bookId, String title, boolean available, boolean reserved, int maxloanDays, BigDecimal finePerDay, String description) {
+        this.bookId = bookId;
+        this.title = title;
+        this.available = available;
+        this.reserved = reserved;
+        this.maxloanDays = maxloanDays;
+        this.finePerDay = finePerDay;
+        this.description = description;
+    }
+
     public int getBookId() {
         return bookId;
     }

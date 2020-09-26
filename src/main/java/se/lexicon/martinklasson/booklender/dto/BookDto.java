@@ -1,15 +1,24 @@
 package se.lexicon.martinklasson.booklender.dto;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Null;
+import javax.validation.constraints.PositiveOrZero;
+import javax.validation.constraints.Size;
 import java.math.BigDecimal;
 import java.util.Objects;
 
 public class BookDto {
 
+    //@Null(message = "Book id is created automatically, don't create it!")
     private int bookId;
+    @NotBlank(message = "Title is compulsary")
+    @Size(min = 1)
     private String title;
     private boolean available;
     private boolean reserved;
+    @PositiveOrZero
     private int maxLoanDays;
+    @PositiveOrZero
     private BigDecimal finePerDay;
     private String description;
 

@@ -28,6 +28,11 @@ public class LibraryUser {
         this.email = email;
     }
 
+    //If user is present it has an id > 0...
+    public boolean isPresent(){
+        return userId > 0;
+    }
+
     public int getUserId() {
         return userId;
     }

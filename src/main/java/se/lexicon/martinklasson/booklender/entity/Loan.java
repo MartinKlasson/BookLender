@@ -50,7 +50,7 @@ public class Loan {
         int daysOverdue = getLoanDays(loanDate, LocalDate.now()) - book.getMaxloanDays();
 
         if(isOverdue()){
-            System.out.println("In getFine, isOverdue");
+            //System.out.println("In getFine, isOverdue");
             fine = BigDecimal.valueOf(daysOverdue).multiply(book.getFinePerDay());
         }
         return fine;

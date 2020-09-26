@@ -1,13 +1,20 @@
 package se.lexicon.martinklasson.booklender.dto;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Null;
+import javax.validation.constraints.PastOrPresent;
 import java.time.LocalDate;
 import java.util.Objects;
 
 public class LoanDto {
 
+    //@Null(message = "Loan id is created automatically, don't create it!")
     private long loanId;
+    @NotNull(message = "Loan need a loan taker to be created.")
     private LibraryUserDto loanTaker;
+    @NotNull(message = "Loan need a book to be created.")
     private BookDto book;
+    @PastOrPresent(message = "Loan can't have a future date.")
     private LocalDate loanDate;
     private boolean expired;
 
