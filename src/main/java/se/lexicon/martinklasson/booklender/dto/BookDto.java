@@ -9,7 +9,7 @@ import java.util.Objects;
 
 public class BookDto {
 
-    //@Null(message = "Book id is created automatically, don't create it!")
+    //Id generated automatically
     private int bookId;
     @NotBlank(message = "Title is compulsary")
     @Size(min = 1)

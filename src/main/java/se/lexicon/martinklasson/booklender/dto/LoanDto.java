@@ -8,7 +8,7 @@ import java.util.Objects;
 
 public class LoanDto {
 
-    //@Null(message = "Loan id is created automatically, don't create it!")
+
     private long loanId;
     @NotNull(message = "Loan need a loan taker to be created.")
     private LibraryUserDto loanTaker;

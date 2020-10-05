@@ -10,7 +10,7 @@ import java.util.Objects;
 public class LibraryUserDto {
 
     public static final String EMAIL_PATTERN = "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$";
-    //@Null(message = "User id is created automatically, don't create it!")
+
     private int userId;
     private LocalDate regDate;
     @NotBlank(message = "Name has to be added")

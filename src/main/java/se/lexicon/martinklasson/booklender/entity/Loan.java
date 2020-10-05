@@ -40,9 +40,13 @@ public class Loan {
     }
 
     public boolean isOverdue(){
+        boolean overdue = false;
         LocalDate now = LocalDate.now();
         int loanDays = getLoanDays(loanDate, now);
-        return loanDays > book.getMaxloanDays();
+        if(loanDays > book.getMaxloanDays()){
+            overdue = true;
+        }
+        return overdue;
     }
 
     public BigDecimal getFine(){
